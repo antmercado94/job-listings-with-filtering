@@ -10,7 +10,7 @@ export default function Banner() {
         <img
           style={{ objectFit: "cover", width: "100%" }}
           src="/bg/bg-header-desktop.svg"
-          alt="Banner image"
+          alt=""
         />
       </picture>
     </div>
