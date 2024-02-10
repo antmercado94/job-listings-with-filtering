@@ -1,0 +1,20 @@
+.box-shadow {
+  -webkit-box-shadow: 5px 25px 30px -20px rgba(91, 164, 164, 0.36);
+  -moz-box-shadow: 5px 25px 30px -20px rgba(91, 164, 164, 0.36);
+  box-shadow: 5px 25px 30px -20px rgba(91, 164, 164, 0.36);
+}
+
+/* fix for vertical centering with this particular font when using full uppercase letters */
+.font-center-adjust::before,
+.font-center-adjust::after {
+  content: "";
+  display: block;
+  height: 0;
+  width: 0;
+}
+.font-center-adjust::before {
+  margin-top: 0.063rem;
+}
+.font-center-adjust::after {
+  margin-bottom: -0.063rem;
+}

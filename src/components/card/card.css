@@ -1,0 +1,28 @@
+.featured {
+  @apply border-l-[0.313rem] border-l-primary-desaturated-dark-cyan pl-[calc(1.5rem-0.313rem)];
+}
+
+.info > li {
+  @apply leading-[0.938rem] -tracking-[0.0096em] text-neutral-dark-grayish-cyan md:text-lg md:leading-[1.063rem];
+}
+
+.info > li:after:not(:last-child) {
+  @apply ml-[0.625rem] inline-block h-[0.25rem] w-[0.25rem] rounded-full bg-neutral-dark-grayish-cyan/60 align-middle content-[""] md:ml-[1.125rem];
+}
+
+.categories {
+  @apply flex flex-wrap gap-4;
+}
+
+.categories:not(.categories--filters) > li > button {
+  @apply cursor-pointer rounded-md bg-neutral-lighter-grayish-cyan px-[.59rem] py-[.19rem] font-bold -tracking-[0.0096em] text-primary-desaturated-dark-cyan hover:bg-primary-desaturated-dark-cyan hover:text-white;
+}
+
+/* filter tablet */
+.categories--filters > li {
+  @apply flex items-center gap-[0.625rem] rounded-md bg-neutral-lighter-grayish-cyan pl-[0.5rem] font-bold -tracking-[0.0096em] text-primary-desaturated-dark-cyan;
+}
+
+.categories--filters > li > button {
+  @apply h-full rounded-e-md bg-primary-desaturated-dark-cyan p-[0.56rem] hover:bg-neutral-very-dark-grayish-cyan;
+}

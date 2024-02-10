@@ -1,0 +1,17 @@
+@import "./_main";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  @apply bg-neutral-light-grayish-cyan 3xl:text-[1.2rem];
+}
+
+body {
+  /* 320px */
+  min-width: 20rem;
+}
+
+.page-margin {
+  @apply mx-[max(1.5rem,6.4vw)] md:mx-[min(10.313rem,11.5vw)] 2xl:mx-auto 2xl:max-w-[1150px] 3xl:max-w-[1350px];
+}
