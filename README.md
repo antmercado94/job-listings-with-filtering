@@ -39,6 +39,7 @@ Users should be able to:
 - [Vite](https://vitejs.dev/)
 - [React](https://reactjs.org/)
 - [Typescript](https://www.typescriptlang.org/)
+- [Zustand](https://docs.pmnd.rs/zustand/getting-started/introduction)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [Sass](https://sass-lang.com/)
 
