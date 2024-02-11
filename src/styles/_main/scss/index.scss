@@ -1,0 +1,5 @@
+@import "./mixins.scss";
+
+.font-center-adjust {
+  @include text-crop();
+}

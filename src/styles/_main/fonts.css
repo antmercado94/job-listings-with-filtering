@@ -1,11 +1,11 @@
 @font-face {
-	font-family: 'League Spartan';
-	font-weight: 500;
-	src: url('../../assets/fonts/LeagueSpartan-Medium.ttf') format('truetype');
+  font-family: "League Spartan";
+  font-weight: 500;
+  src: url("../../assets/fonts/LeagueSpartan-Medium.ttf") format("truetype");
 }
 
 @font-face {
-	font-family: 'League Spartan';
-	font-weight: 800;
-	src: url('../../assets/fonts/LeagueSpartan-Bold.ttf') format('truetype');
+  font-family: "League Spartan";
+  font-weight: 800;
+  src: url("../../assets/fonts/LeagueSpartan-Bold.ttf") format("truetype");
 }
