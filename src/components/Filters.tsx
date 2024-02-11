@@ -16,7 +16,7 @@ export default function Filters() {
               >
                 {filters.map((filter) => (
                   <li key={filter}>
-                    {filter}
+                    <span className="font-center-adjust">{filter}</span>
                     <button
                       onClick={() => removeFilter(filter)}
                       aria-label={`Remove ${filter} Filter`}

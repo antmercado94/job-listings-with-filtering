@@ -7,7 +7,7 @@ function CardType({ type }: { type: "NEW" | "FEATURED" }) {
   const isFeatured = type === "FEATURED";
   return (
     <li
-      className={clsx("flex h-6 items-center rounded-2xl px-[0.513rem]", {
+      className={clsx("flex min-h-6 items-center rounded-2xl px-[0.513rem]", {
         "bg-primary-desaturated-dark-cyan": isNew,
         "bg-neutral-very-dark-grayish-cyan": isFeatured,
       })}
@@ -38,7 +38,8 @@ export default function Card({
   function handleClick(e: React.MouseEvent<HTMLElement>) {
     // event delegation
     const { nodeName, textContent } = e.target as HTMLElement;
-    if (nodeName === "BUTTON" && textContent) {
+    console.log(nodeName);
+    if ((nodeName === "BUTTON" || nodeName === "SPAN") && textContent) {
       setFilter(textContent);
     }
   }
@@ -126,12 +127,13 @@ export default function Card({
                   {[role, level, languages, tools].flat().map((cat, i) => (
                     <li key={i} aria-label={cat}>
                       <button
+                        className="min-h-[1.875rem]"
                         aria-label={`${cat} Filter`}
                         type="button"
                         aria-haspopup="dialog"
                         onClick={handleClick}
                       >
-                        {cat}
+                        <span className="font-center-adjust">{cat}</span>
                       </button>
                     </li>
                   ))}
