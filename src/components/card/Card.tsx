@@ -7,7 +7,7 @@ function CardType({ type }: { type: "NEW" | "FEATURED" }) {
   const isFeatured = type === "FEATURED";
   return (
     <li
-      className={clsx("rounded-2xl px-[0.513rem]", {
+      className={clsx("flex h-6 items-center rounded-2xl px-[0.513rem]", {
         "bg-primary-desaturated-dark-cyan": isNew,
         "bg-neutral-very-dark-grayish-cyan": isFeatured,
       })}
@@ -74,11 +74,11 @@ export default function Card({
           </div>
         </div>
         {/* content */}
-        <div className="mt-2 flex flex-col gap-[0.875rem] md:mt-0 md:flex-1 md:gap-[0.75rem] lg:gap-[0.313rem]">
-          <div className="flex flex-wrap items-center gap-[0.5rem] md:gap-4 xs:gap-[1.375rem]">
+        <div className="mt-2 flex flex-col gap-[0.875rem] md:mt-0 md:flex-1 md:gap-[0.75rem] lg:gap-[0.4rem]">
+          <div className="flex flex-wrap items-center gap-[0.5rem] xs:gap-4">
             <h1
               aria-description="The name of the company seeking new applicants."
-              className="text-[0.938rem] font-bold leading-[0.875rem] tracking-[.0168em] text-primary-desaturated-dark-cyan md:text-lg md:leading-[1.063rem]"
+              className="text-[0.938rem] font-bold leading-[0.875rem] text-primary-desaturated-dark-cyan md:text-lg md:leading-[1.063rem]"
             >
               {company}
             </h1>
@@ -89,11 +89,11 @@ export default function Card({
               </ul>
             ) : null}
           </div>
-          <div className="flex flex-col gap-[1.125rem] md:gap-4 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-[0.563rem]">
+          <div className="flex flex-col gap-[1.125rem] md:gap-4 lg:flex-row lg:flex-wrap lg:items-center lg:justify-between lg:gap-[0.4rem]">
             <div className="md:order-1">
               <h2
                 aria-description="The job position being sought by the company."
-                className="w-fit cursor-pointer text-[0.938rem] font-bold leading-[0.875rem] tracking-[.02em] text-neutral-very-dark-grayish-cyan hover:text-primary-desaturated-dark-cyan md:text-[1.375rem] md:leading-5 md:tracking-[0.0205em]"
+                className="w-fit cursor-pointer text-[0.938rem] font-bold leading-[0.875rem] text-neutral-very-dark-grayish-cyan hover:text-primary-desaturated-dark-cyan md:text-[1.375rem] md:leading-5"
               >
                 <a href="#" title={`Apply for this position.`}>
                   {position}
