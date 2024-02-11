@@ -96,8 +96,9 @@ export default function Card({
               </h2>
             </div>
             <section
+              id="card-information"
+              aria-label="Information"
               className="md:order-3 md:basis-full"
-              aria-label="Position Information"
             >
               <ul className="info flex flex-wrap items-center gap-2 md:gap-[1.125rem]">
                 {[
@@ -116,7 +117,7 @@ export default function Card({
                 aria-hidden="true"
                 className="mb-[1.125rem] h-[0.063rem] border-neutral-dark-grayish-cyan/60 md:hidden"
               />
-              <section aria-label="Job Categories">
+              <section id="card-categories" aria-label="Categories">
                 <ul className="categories">
                   {[role, level, languages, tools].flat().map((cat, i) => (
                     <li key={i} aria-label={cat}>
