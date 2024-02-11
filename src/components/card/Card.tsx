@@ -60,7 +60,7 @@ export default function Card({
   }
 
   return (
-    <article aria-label={getListingLabel()}>
+    <article aria-label={`${getListingLabel()} ${id}`}>
       <div
         className={clsx(
           "box-shadow relative rounded-md bg-white p-6 md:flex md:items-center md:gap-[1.438rem] md:px-10 md:py-8",
@@ -98,7 +98,7 @@ export default function Card({
             </div>
             <section
               id={`card-info-${id}`}
-              aria-label="Information"
+              aria-label={`Listing ${id} Information`}
               className="md:order-3 md:basis-full"
             >
               <ul className="info flex flex-wrap items-center gap-2 md:gap-[1.125rem]">
@@ -118,7 +118,10 @@ export default function Card({
                 aria-hidden="true"
                 className="mb-[1.125rem] h-[0.063rem] border-neutral-dark-grayish-cyan/60 md:hidden"
               />
-              <section id={`card-cats-${id}`} aria-label="Categories">
+              <section
+                id={`card-cats-${id}`}
+                aria-label={`Listing ${id} Categories`}
+              >
                 <ul className="categories">
                   {[role, level, languages, tools].flat().map((cat, i) => (
                     <li key={i} aria-label={cat}>
