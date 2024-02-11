@@ -20,6 +20,7 @@ function CardType({ type }: { type: "NEW" | "FEATURED" }) {
 }
 
 export default function Card({
+  id,
   logo,
   company,
   new: isNew,
@@ -96,7 +97,7 @@ export default function Card({
               </h2>
             </div>
             <section
-              id="info"
+              id={`card-info-${id}`}
               aria-label="Information"
               className="md:order-3 md:basis-full"
             >
@@ -117,7 +118,7 @@ export default function Card({
                 aria-hidden="true"
                 className="mb-[1.125rem] h-[0.063rem] border-neutral-dark-grayish-cyan/60 md:hidden"
               />
-              <section id="cats" aria-label="Categories">
+              <section id={`card-cats-${id}`} aria-label="Categories">
                 <ul className="categories">
                   {[role, level, languages, tools].flat().map((cat, i) => (
                     <li key={i} aria-label={cat}>
